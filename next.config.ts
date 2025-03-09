@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export',
+  basePath: '/Shifa-AI', // This should match your repository name exactly
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
