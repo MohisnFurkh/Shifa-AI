@@ -15,9 +15,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build && npm run export
+        run: npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: out  # The output directory of Next.js export
+          # Create a .nojekyll file to prevent GitHub from using Jekyll
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll

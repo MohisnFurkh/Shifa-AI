@@ -59,9 +59,11 @@ ShifaAI is an AI-powered healthcare platform designed to assist patients, doctor
 npm run dev
 # or
 yarn dev
-   ```
+```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+4. For development: Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+   
+   For production: Visit [https://mohisnfurkh.github.io/Shifa-AI/](https://mohisnfurkh.github.io/Shifa-AI/) to see the live site.
 
 ## Project Structure
 
