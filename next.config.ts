@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/Shifa-AI', // This should match your repository name exactly
+  // Only use basePath in production environment
+  basePath: process.env.NODE_ENV === 'production' ? '/Shifa-AI' : '',
   images: {
     unoptimized: true,
   },
