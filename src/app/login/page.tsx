@@ -2,7 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// Temporarily remove Framer Motion to fix build errors
+// import { motion } from 'framer-motion';
+
+// Define the styled motion component to fix type issues
+// const MotionDiv = motion.div;
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -64,26 +68,16 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-10"
-        >
+        <div className="text-center mb-10">
           <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
             Welcome Back
           </h1>
           <p className="mt-3 text-gray-600 dark:text-gray-300">
             Sign in to your ShifaAI account
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-white dark:bg-gray-800 shadow rounded-lg p-8"
-        >
+        <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
@@ -227,7 +221,7 @@ export default function LoginPage() {
               Sign up
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
